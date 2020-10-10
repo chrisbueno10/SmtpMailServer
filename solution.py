@@ -39,7 +39,7 @@ def smtp_client(port=1025, mailserver= '127.0.0.1'):
     # Fill in start
     mailFrom='MAIL FROM:<chrisbueno10@hotmail.com>\r\n'
     clientSocket.send(mailFrom.encode())
-    recv2=clientSocket.recv(1024).decode()
+    recv1=clientSocket.recv(1024).decode()
     #print(recv2)
     # Fill in end
 
@@ -47,7 +47,7 @@ def smtp_client(port=1025, mailserver= '127.0.0.1'):
     # Fill in start
     rcptTo= 'RCPT TO:<ceb587@nyu.edu>\r\n'
     clientSocket.send(rcptTo.encode())
-    recv3 = clientSocket.recv(1024).decode()
+    recv1 = clientSocket.recv(1024).decode()
 
     # Fill in end
 
@@ -55,7 +55,7 @@ def smtp_client(port=1025, mailserver= '127.0.0.1'):
     # Fill in start
     dataHeader = 'DATA\r\n'
     clientSocket.send(dataHeader.endcode())
-    recv4 = clientSocket.recv(1024).decode()
+    recv1 = clientSocket.recv(1024).decode()
     #print(recv4)
     # Fill in end
 
@@ -73,7 +73,7 @@ def smtp_client(port=1025, mailserver= '127.0.0.1'):
     # Fill in start
     quitCmd='Quit'
     clientSocket.send(quitCmd.encode())
-    recv5=clientSocket.recv(1024).decode()
+    recv1=clientSocket.recv(1024).decode()
     #print(recv5)
     clientSocket.close()
     # Fill in end
